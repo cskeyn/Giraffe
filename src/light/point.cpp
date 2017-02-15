@@ -34,7 +34,6 @@ std::shared_ptr<Light> createPointLight(Slice &slice)
 {
 	Point3d position = slice.findPosition();
 	Vector3d intensity = slice.findVector();
-	assert(slice.eof());
 	return std::shared_ptr<Light>(new PointLight(position, intensity));
 }
 
